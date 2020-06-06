@@ -15,6 +15,7 @@ class App extends Component {
     temp: "",
     preassure: "",
     wind: "",
+    humidity: "",
     err: false
   };
 
@@ -54,6 +55,7 @@ class App extends Component {
           temp: data.main.temp,
           preassure: data.main.pressure,
           wind: data.wind.speed,
+          humidity: data.main.humidity,
           city: prevState.value
         }));
       })
@@ -70,7 +72,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="weather-app">
         <Form
           value={this.state.value}
           change={this.handleInputChange}

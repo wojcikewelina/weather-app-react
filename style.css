@@ -1,3 +1,7 @@
-h1, p {
-  font-family: Lato;
+.weather-app button, .weather-app button {
+
+}
+
+.weather-app {
+  margin: 0 auto;
 }

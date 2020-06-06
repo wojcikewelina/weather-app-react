@@ -1,0 +1,15 @@
+.result-content {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.result-content div {
+width: 40%;
+
+border: 1px solid grey;
+}
+.result-content h3 {
+  width:90%;
+  justify-content: center;
+}

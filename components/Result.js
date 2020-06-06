@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Result.css"
 
 const Result = props => {
   const {
@@ -10,7 +11,7 @@ const Result = props => {
     temp,
     preassure,
     wind,
-    err
+    err, humidity
   } = props.weather;
 
   let content = null;
@@ -20,14 +21,28 @@ const Result = props => {
     const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
 
     content = (
-      <div>
-        <h3>Wyszukiwanie danych pogodowych dla miasta {city} </h3>
-        <h4>Dane są aktualne dla dnia i godziny: {date}</h4>
-        <h4>Aktualna temperatura: {temp} &#176;C</h4>
-        <h4>Wschód słońca dziś o godzinie: {sunriseTime}</h4>
-        <h4>Zachód słońca dziś o godzinie: {sunsetTime}</h4>
-        <h4>Wiatr {wind} m/s</h4>
-        <h4>Ciśnienie {preassure} hPa</h4>
+      <div className="result-content">
+        
+          <h3> {city} - pogoda na dziś</h3>
+        
+        <div>
+          <h4>Aktualna temperatura: {temp} &#176;C</h4>
+        </div>
+        <div>
+          <h4>Wschód słońca dziś o godzinie: {sunriseTime}</h4>
+        </div>
+        <div>
+          <h4>Zachód słońca dziś o godzinie: {sunsetTime}</h4>
+        </div>
+        <div>
+          <h4>Wiatr {wind} m/s</h4>
+        </div>
+        <div>
+          <h4>Ciśnienie {preassure} hPa</h4>
+        </div>
+        <div>
+          <h4>Wigotność powietrza: {humidity}</h4>
+        </div>
       </div>
     );
   }
