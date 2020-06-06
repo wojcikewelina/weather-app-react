@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.weather-app {
+  font-family: lato;
+}

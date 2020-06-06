@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import Form from "./components/Form";
 import Result from "./components/Result";
 const API_KEY = "b78b7348c5d427499d13f6efb383f10b";
-import "./style.css";
+import "./index.css";
 
 class App extends Component {
   state = {
@@ -73,6 +73,9 @@ class App extends Component {
   render() {
     return (
       <div className="weather-app">
+        <header>
+          <h1>Sprawdź aktualną pogodę w twoim mieście</h1>
+        </header>
         <Form
           value={this.state.value}
           change={this.handleInputChange}

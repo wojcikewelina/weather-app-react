@@ -1,0 +1,38 @@
+form {
+  display: flex;
+  justify-content: flex;
+  width: 100%;
+  align-items: stretch;
+  height: 70px;
+  -webkit-box-shadow: 6px 9px 19px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 9px 19px -8px rgba(0,0,0,0.75);
+  box-shadow: 6px 9px 19px -8px rgba(0,0,0,0.75);
+}
+
+form span {
+  width: 25%;
+  background-color: #1B4778;
+  padding: 20px;
+  border: 0.1px solid darkgray;
+  font-size: 22px;
+  color: white;
+}
+form input {
+  flex-grow: 1;
+  background-color: white;
+  padding: 20px;
+  border: 0.1px solid darkgray;
+
+}
+form button {
+  
+  border: 0.1px solid darkgray;
+  width: 25%;
+  padding: 20px;
+  transition: .3s
+}
+form button:hover{
+  background-color:  dimgrey;
+  border: darkgreen;
+  color: lightgray;
+}

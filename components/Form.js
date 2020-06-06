@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
+import './Form.css'
 
 const Form = (props) =>{
   return (
+
+
     <form onSubmit={props.submit}>
-    <input type="text" 
+    <span>Wpisz nazwę miasta:  </span><input type="text" 
     value={props.value}
-    placeholder = "Wpisz nazwę miasta"
+    placeholder = "nazwa miasta"
     onChange={props.change}
     />
     <button> Wyszukaj miasta</button>

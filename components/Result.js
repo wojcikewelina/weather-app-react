@@ -29,10 +29,10 @@ const Result = props => {
           <h4>Aktualna temperatura: {temp} &#176;C</h4>
         </div>
         <div>
-          <h4>Wschód słońca dziś o godzinie: {sunriseTime}</h4>
+          <h4>Wschód słońca o godzinie: {sunriseTime}</h4>
         </div>
         <div>
-          <h4>Zachód słońca dziś o godzinie: {sunsetTime}</h4>
+          <h4>Zachód słońca o godzinie: {sunsetTime}</h4>
         </div>
         <div>
           <h4>Wiatr {wind} m/s</h4>
@@ -41,7 +41,7 @@ const Result = props => {
           <h4>Ciśnienie {preassure} hPa</h4>
         </div>
         <div>
-          <h4>Wigotność powietrza: {humidity}</h4>
+          <h4>Wigotność powietrza: {humidity} %</h4>
         </div>
       </div>
     );
