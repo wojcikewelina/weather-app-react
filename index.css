@@ -32,7 +32,11 @@ header h1 {
 
 #root {
   background-image: url(https://image.freepik.com/darmowe-wektory/wzor-pogody-i-tla_1061-487.jpg);
-  height: 100vh;
-  position:relative;
-  margin:-8px;
+ 
+ 
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

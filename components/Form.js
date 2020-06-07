@@ -11,7 +11,7 @@ const Form = (props) =>{
     placeholder = "Wpisz nazwę miasta"
     onChange={props.change}
     />
-    <button> Wyszukaj miasta</button>
+    <button> Wyszukaj!</button>
 
     </form>
   )
