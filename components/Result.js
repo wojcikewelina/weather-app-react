@@ -23,7 +23,7 @@ const Result = props => {
     content = (
       <div className="result-content">
         
-          <h3> {city} - pogoda na dziś</h3>
+          <h3> <b className="capitalization">{city}</b> - pogoda na dziś</h3>
         
         <div>
           <h4>Aktualna temperatura: {temp} &#176;C</h4>

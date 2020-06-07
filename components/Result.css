@@ -13,3 +13,7 @@ border: 1px solid grey;
   width:90%;
   justify-content: center;
 }
+
+.capitalization{
+  text-transform: capitalize;
+}
