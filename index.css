@@ -3,7 +3,36 @@ header {
   justify-content: center;
   
 }
+header h1 {
+  background-color: #3366FF;
+  padding: 0.7em 0.4em;
+  margin-bottom: 0.2em;
+  font-size: 27px;
+  width: 100%;
+  text-align: center;
+
+/* shadow */
+  -webkit-box-shadow: 4px -2px 10px -3px #000000; 
+  box-shadow: 4px -2px 10px -3px #000000;
+
+/* text-decoration */
+  letter-spacing: 1.2px;
+  word-spacing: 2.4px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
 
 .weather-app {
   font-family: lato;
+}
+
+#root {
+  background-image: url(https://image.freepik.com/darmowe-wektory/wzor-pogody-i-tla_1061-487.jpg);
+  height: 100vh;
+  position:relative;
+  margin:-8px;
 }

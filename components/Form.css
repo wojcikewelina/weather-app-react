@@ -7,14 +7,17 @@ form {
   -webkit-box-shadow: 6px 9px 19px -8px rgba(0,0,0,0.75);
   -moz-box-shadow: 6px 9px 19px -8px rgba(0,0,0,0.75);
   box-shadow: 6px 9px 19px -8px rgba(0,0,0,0.75);
+  padding: 25px 0px 25px 0px;
+  background-color: #1B4778
 }
 
 form span {
   width: 25%;
+  min-width: 150px;
   background-color: #1B4778;
-  padding: 20px;
-  border: 0.1px solid darkgray;
-  font-size: 22px;
+  margin-left: 10px;
+  align-self: center;
+  font-size: 1.5em;
   color: white;
 }
 form input {
@@ -29,7 +32,8 @@ form button {
   border: 0.1px solid darkgray;
   width: 25%;
   padding: 20px;
-  transition: .3s
+  transition: .3s;
+  margin-right: 10px;
 }
 form button:hover{
   background-color:  dimgrey;
