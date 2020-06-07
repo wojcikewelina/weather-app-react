@@ -16,7 +16,7 @@ class App extends Component {
     preassure: "",
     wind: "",
     humidity: "",
-    err: false
+    err: false;
   };
 
   handleInputChange = e => {
