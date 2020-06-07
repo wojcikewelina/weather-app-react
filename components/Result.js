@@ -48,7 +48,7 @@ const Result = props => {
   }
 
   return (
-    <div clasName="result">{err ? `Nie mamy ${city} w bazie` : content}</div>
+    <div className="result">{err ? `Nie mamy ${city} w bazie` : content}</div>
   );
 };
 export default Result;
