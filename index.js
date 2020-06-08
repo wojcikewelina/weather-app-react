@@ -108,6 +108,7 @@ class App extends Component {
   render() {
     return (
       <div className="weather-app">
+      <div id="backgroundOfApp"/>
         <header>
           <h1>Sprawdź aktualną pogodę w twoim mieście</h1>
         </header>

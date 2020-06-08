@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Result.css"
+import "./Result.css";
 
 const Result = props => {
   const {
@@ -11,7 +11,8 @@ const Result = props => {
     temp,
     preassure,
     wind,
-    err, humidity
+    err,
+    humidity
   } = props.weather;
 
   let content = null;
@@ -22,26 +23,33 @@ const Result = props => {
 
     content = (
       <div className="result-content">
-        
-          <h3> <b className="capitalization">{city}</b> - pogoda na dziś</h3>
-        
-        <div>
-          <h4>Aktualna temperatura: {temp} &#176;C</h4>
+        <h2>
+          <b className="capitalization">{city}</b> - pogoda na dziś
+        </h2>
+
+        <div className="resultWeatherDiv">
+          <h3>Aktualna temperatura: </h3>
+          <div>{temp} &#176;C</div>
         </div>
-        <div>
-          <h4>Wschód słońca o godzinie: {sunriseTime}</h4>
+        <div className="resultWeatherDiv">
+          <h3>Wschód słońca o godzinie:</h3>
+          <div>{sunriseTime}</div>
         </div>
-        <div>
-          <h4>Zachód słońca o godzinie: {sunsetTime}</h4>
+        <div className="resultWeatherDiv">
+          <h3>Zachód słońca o godzinie:</h3>
+          <div> {sunsetTime}</div>
         </div>
-        <div>
-          <h4>Wiatr {wind} m/s</h4>
+        <div className="resultWeatherDiv">
+          <h3>Wiatr </h3>
+          <div>{wind} m/s</div>
         </div>
-        <div>
-          <h4>Ciśnienie {preassure} hPa</h4>
+        <div className="resultWeatherDiv">
+          <h3>Ciśnienie </h3>
+          <div>{preassure} hPa </div>
         </div>
-        <div>
-          <h4>Wigotność powietrza: {humidity} %</h4>
+        <div className="resultWeatherDiv">
+          <h3>Wigotność powietrza: </h3>
+          <div>{humidity} %</div>
         </div>
       </div>
     );
