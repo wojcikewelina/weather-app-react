@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import Form from "./components/Form";
 import Result from "./components/Result";
-const API_KEY = "b78b7348c5d427499d13f6efb383f10b";
 import "./index.css";
-import CITY_PL from "./services/listOfCities";
-let cityWithoutPlLetter = [];
-
 
 String.prototype.escapeDiacritics = function() {
   return this.replace(/ą/g, "a")
@@ -34,8 +30,7 @@ class App extends Component {
     value: "",
     date: "",
     city: "",
-    sunrise: "",
-    sunset: "",
+    rain: "",
     temp: "",
     preassure: "",
     wind: "",
@@ -43,32 +38,21 @@ class App extends Component {
     err: false
   };
 
-  componentDidMount() {
-    for (var i = 0; i < CITY_PL.length; i++) {
-      cityWithoutPlLetter[i] = CITY_PL[i].escapeDiacritics();
-    }
-    var aa = "źżbul";
-
-    console.log(aa.escapeDiacritics());
-    console.log(CITY_PL[41]);
-    console.log(cityWithoutPlLetter[41]);
-  }
-
   handleInputChange = e => {
     this.setState({
       value: e.target.value
     });
-    console.log(this.state.value);
+    console.log("stejt to: " + this.state.value);
   };
 
   handleCitySubmit = e => {
     //zatrzymanie działanie defaultowego - nie odświeży się już;
     e.preventDefault();
     console.log("potwierdzony formularz");
-    const API = `https://api.openweathermap.org/data/2.5/weather?q=${
-      this.state.value
-    }&appid=${API_KEY}&units=metric`;
-
+    const API = `https://danepubliczne.imgw.pl/api/data/synop/station/${this.state.value
+      .escapeDiacritics()
+      .toLowerCase()}`;
+    console.log(API);
     fetch(API)
       .then(response => {
         if (response.ok) {
@@ -81,17 +65,17 @@ class App extends Component {
         //Pobranie aktualnnej daty spoza API
         const time = new Date().toLocaleString();
 
-        console.log(data.sys.sunrise);
+        console.log(data.data_pomiaru);
+
         this.setState(prevState => ({
           err: false,
-          date: time,
-          sunrise: data.sys.sunrise,
-          sunset: data.sys.sunset,
-          temp: data.main.temp,
-          preassure: data.main.pressure,
-          wind: data.wind.speed,
-          humidity: data.main.humidity,
-          city: prevState.value
+          data: data.data_pomiaru,
+          temp: data.temperatura,
+          rain: data.suma_opadu,
+          preassure: data.cisnienie,
+          wind: data.predkosc_wiatru,
+          humidity: data.wilgotnosc_wzgledna,
+          city: data.stacja
         }));
       })
       .catch(err => {
@@ -108,7 +92,7 @@ class App extends Component {
   render() {
     return (
       <div className="weather-app">
-      <div id="backgroundOfApp"/>
+        <div id="backgroundOfApp" />
         <header>
           <h1>Sprawdź aktualną pogodę w twoim mieście</h1>
         </header>

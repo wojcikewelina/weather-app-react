@@ -6,8 +6,7 @@ const Result = props => {
     err,
     city,
     date,
-    sunrise,
-    sunset,
+    rain,
     temp,
     preassure,
     wind,
@@ -18,8 +17,6 @@ const Result = props => {
   let content = null;
 
   if (!err && city) {
-    const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
-    const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
 
     content = (
       <div className="result-content">
@@ -32,12 +29,8 @@ const Result = props => {
           <div>{temp} &#176;C</div>
         </div>
         <div className="resultWeatherDiv">
-          <h3>Wschód słońca o godzinie:</h3>
-          <div>{sunriseTime}</div>
-        </div>
-        <div className="resultWeatherDiv">
-          <h3>Zachód słońca o godzinie:</h3>
-          <div> {sunsetTime}</div>
+          <h3>Suma opadów:</h3>
+          <div>{rain}</div>
         </div>
         <div className="resultWeatherDiv">
           <h3>Wiatr </h3>
