@@ -1,4 +1,4 @@
-# Nazwa aplikacji:
+# Nazwa aplikacji
 
 Pogoda w Twoim mieście
 
