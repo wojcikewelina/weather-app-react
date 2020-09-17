@@ -5,7 +5,6 @@ const Result = props => {
   const {
     err,
     city,
-    date,
     rain,
     temp,
     preassure,
